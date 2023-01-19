@@ -1,0 +1,9 @@
+{
+    "WRONG_PASSWORD" : "Password yang ada masukkan salah",
+    "EMAIL_NOT_FOUND" : "Email tidak ditemukan",
+    "EMAIL_INVALID" : "Format email tidak valid",
+    "AUTH_REQUIRED" : "Untuk mengakses halaman tersebut, anda harus login",
+    "FIELD_REQUIRED" : "{field} harus di isi",
+    "FIELD_MIN" : "{field} minimal {min} karakter",
+    "FIELD_CONFIRM" : "{confirm} tidak sama dengan {field}"
+}

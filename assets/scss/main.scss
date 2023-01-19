@@ -3,6 +3,7 @@ html, body {
   overflow: hidden !important;
 }
 
+// layout
 .frame-content {
   height: 90vh;
   overflow-y: auto;
@@ -18,3 +19,17 @@ html, body {
   background-color: #dbdbdb;
   border-radius: 100px;
 }
+
+//loading
+.spin-loading {
+  animation: spin 1s infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} 
