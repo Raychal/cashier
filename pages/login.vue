@@ -69,7 +69,7 @@ export default({
         },
         onSubmit() {
             this.isDisable = true
-            this.$axios.$post('http://localhost:3000/auth/login', this.form)
+            this.$axios.$post('/auth/login', this.form)
             .then(response => {
                 if (!localStorage.welcomeScreen) {
                     this.storeWelcomeScreen()

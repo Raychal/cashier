@@ -46,6 +46,7 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/i18n',
+    '@nuxtjs/dotenv',
   ],
 
   i18n: {
@@ -57,7 +58,7 @@ export default {
   },
 
   axios: {
-
+    baseUrl: process.env.API_URL
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
