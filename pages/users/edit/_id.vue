@@ -43,12 +43,8 @@
                     <v-btn 
                         @click="onSubmit" 
                         color="primary"
-                        :disabled="isDisable">
-                        <span v-if="!isDisable">Save</span>
-                        <v-progress-circular
-                        v-else
-                        color="primary"
-                        indeterminate></v-progress-circular>
+                        :loading="isDisable">
+                        Save
                     </v-btn>
                 </v-card-actions>
             </v-card>
@@ -60,6 +56,9 @@
   
   export default({
     middleware: ['authenticated'],
+    head: {
+      title: 'Edit User'
+    },
     asyncData({isDev, route, store, env, params, query, req, res, redirect, error}) {
         return {
             id: params.id

@@ -14,7 +14,10 @@
 <script>
 
 export default ({
-    middleware: ['authenticated']
+    middleware: ['authenticated'],
+    head: {
+      title: 'Dashboard'
+    },
 })
 
 </script>

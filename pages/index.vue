@@ -12,7 +12,10 @@
 <script>
 
 export default ({
-    middleware: ['authenticated']
+    middleware: ['authenticated'],
+    head: {
+      title: 'App'
+    },
 })
 
 </script>

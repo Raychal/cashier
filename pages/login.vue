@@ -27,12 +27,8 @@
                     <v-btn 
                         @click="onSubmit" 
                         color="primary"
-                        :disabled="isDisable">
-                        <span v-if="!isDisable">Login</span>
-                        <v-progress-circular
-                        v-else
-                        color="primary"
-                        indeterminate></v-progress-circular>
+                        :loading="isDisable">
+                        Login
                     </v-btn>
                 </v-card-actions>
             </v-card>
@@ -47,6 +43,9 @@ import { mapMutations } from 'vuex'
 
 export default({
     middleware: ['unauthenticated'],
+    head: {
+      title: 'Login'
+    },
     data() {
         return {
             message: '',
@@ -75,7 +74,7 @@ export default({
                     this.storeWelcomeScreen()
                     alert()
                 }
-                this.isDisable = false
+                // this.isDisable = false
 
                 // store auth data
                 this.setFullname(response.fullname)
@@ -87,7 +86,7 @@ export default({
             })
             .catch(error => {
                 this.message = error.response.data.message 
-                this.isDisable = false
+                // this.isDisable = false
                 this.isError = true
             })
         },

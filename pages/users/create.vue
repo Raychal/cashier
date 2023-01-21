@@ -41,15 +41,11 @@
               <v-card-actions>
                   <v-spacer></v-spacer>
                   <v-btn 
-                      @click="onSubmit" 
-                      color="primary"
-                      :disabled="isDisable">
-                      <span v-if="!isDisable">Save</span>
-                      <v-progress-circular
-                      v-else
-                      color="primary"
-                      indeterminate></v-progress-circular>
-                  </v-btn>
+                        @click="onSubmit" 
+                        color="primary"
+                        :loading="isDisable">
+                        Save
+                    </v-btn>
               </v-card-actions>
           </v-card>
       </v-col>
@@ -60,6 +56,9 @@
 
 export default({
   middleware: ['authenticated'],
+  head: {
+      title: 'Create User'
+    },
   data() {
       return {
           emailExist: false,

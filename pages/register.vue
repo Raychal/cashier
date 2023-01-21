@@ -37,12 +37,8 @@
                     <v-btn 
                         @click="onSubmit" 
                         color="primary"
-                        :disabled="isDisable">
-                        <span v-if="!isDisable">Register</span>
-                        <v-progress-circular
-                        v-else
-                        color="primary"
-                        indeterminate></v-progress-circular>
+                        :loading="isDisable">
+                        Register
                     </v-btn>
                 </v-card-actions>
             </v-card>
@@ -55,6 +51,9 @@
 
 export default({
     middleware: ['unauthenticated'],
+    head: {
+      title: 'Register'
+    },
     data() {
         return {
             emailExist: false,
